@@ -11,7 +11,7 @@
 	$query_i = "SELECT * FROM sysuserregister Where UserName = '$ECode'";
 	$RAva = mysqli_query($conn, $query_i);
 	if(mysqli_num_rows($RAva) > 0){  
-		$Sta = 'Pending';
+		$Sta = 'Musungi';
 		$pwr = hash_hmac('sha512', 'thumbi'.$pwd, $Sta);
 
 		$query = "SELECT * FROM sysuserregister Where UserName = '$ECode' And PassWord='$pwr' ";
